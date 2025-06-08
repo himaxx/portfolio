@@ -23,6 +23,12 @@ import {
   jobit,
   tripguide,
   threejs,
+  sarafa_achievement,
+  saintpeters_achievement,
+  aitr_achievement,
+  iitm_achievement,
+  sih_achievement,
+  nvidia_achievement,
 } from "../assets";
 
 export const navLinks = [
@@ -42,19 +48,19 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Data Scientist",
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "ML Developer",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "LLM Development",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Web Developer and Database",
     icon: creator,
   },
 ];
@@ -116,150 +122,141 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "High School Certificate (10th)",
+    company_name: "Sarafa Vidya Niketan School, Indore, M.P.",
+    icon: sarafa_achievement,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "2018 (CBSE)",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Secured 84.6% in 10th grade."
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "Senior School Certificate (10+2)",
+    company_name: "The Saint Peter's Higher Secondary School, Indore, M.P.",
+    icon: saintpeters_achievement,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "2020 (M.P. Board)",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Secured 91.8% in 12th grade."
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
+    title: "B.Tech in Computer Science & IT (Pursuing)",
+    company_name: "Acropolis Institute of Technology and Research, Indore (RGPV)",
+    icon: aitr_achievement,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "2021-2025",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Current CGPA: 7.91"
     ],
   },
   {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
+    title: "B.Sc. in Data Science & Programming (Pursuing)",
+    company_name: "Indian Institute of Technology (IIT) Madras (Distance Learning)",
+    icon: iitm_achievement,
     iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    date: "2023-Running",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Current CGPA: 6.85"
     ],
   },
-];
-
-const testimonials = [
   {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    title: "Winner - Smart India Hackathon (SIH) 2024",
+    company_name: "Grand Finale",
+    icon: sih_achievement,
+    iconBg: "#383E56",
+    date: "2024",
+    points: [
+      "Winners at Grand Finale of Smart India Hackathon (SIH) 2024."
+    ],
   },
   {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    title: "Nvidia Deep Learning Workshop",
+    company_name: "Nvidia",
+    icon: nvidia_achievement,
+    iconBg: "#E6DEDD",
+    date: "Completed",
+    points: [
+      "Completed Nvidia's Deep Learning Workshop, gaining proficiency in advanced AI and Machine Learning techniques."
+    ],
   },
 ];
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "MargAI",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "An AI driven inclusive assessment tool for skill ecosystem with innovative features like AADHAR OTP based login, UDID-based disability verification, and AI-assisted mental health counselling. 'MargAI' ensures equitable access to holistic support for all learners, including PwD Candidates.",
+    organization: "Smart India Hackathon 2024",
+    role: "AI Developer",
+    duration: "3 months",
+    technology: ["Flutter", "ReactJS", "ExpressJS", "Python", "Azure", "Langflow", "FastAPI"],
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
+      { name: "Flutter", color: "blue-text-gradient" },
+      { name: "ReactJS", color: "blue-text-gradient" },
+      { name: "ExpressJS", color: "green-text-gradient" },
+      { name: "Python", color: "pink-text-gradient" },
+      { name: "Azure", color: "blue-text-gradient" },
+      { name: "Langflow", color: "green-text-gradient" },
+      { name: "FastAPI", color: "pink-text-gradient" },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: carrent, // Placeholder, update with relevant image if available
+    source_code_link: "https://github.com/samarjeet-singh-kheda/marg-ai-web-client",
   },
   {
-    name: "Job IT",
+    name: "KhetiBuddy",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "An AI Driven plant care system, mainly focused on detecting plant disease based on leaf images and providing assistance related to the issue.",
+    organization: "Acropolis Institute of Technology and Research, Indore",
+    role: "Developer",
+    duration: "4 months",
+    technology: ["Python", "HuggingFace", "NextJS", "TailwindCSS", "Langflow", "Teachable Machines(Google)"],
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
+      { name: "Python", color: "blue-text-gradient" },
+      { name: "HuggingFace", color: "green-text-gradient" },
+      { name: "NextJS", color: "blue-text-gradient" },
+      { name: "TailwindCSS", color: "pink-text-gradient" },
+      { name: "Langflow", color: "green-text-gradient" },
+      { name: "Teachable Machines", color: "pink-text-gradient" },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: jobit, // Placeholder, update with relevant image if available
+    source_code_link: "https://github.com/himaxx/KhetiBuddy",
   },
   {
-    name: "Trip Guide",
+    name: "Campus Finder",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A web application to help students and visitors easily locate buildings and facilities on campus using interactive maps and search features.",
+    organization: "Acropolis Institute of Technology and Research, Indore",
+    role: "Developer",
+    duration: "2 months",
+    technology: ["ReactJS", "NodeJS", "ExpressJS", "MongoDB"],
     tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
+      { name: "ReactJS", color: "blue-text-gradient" },
+      { name: "NodeJS", color: "green-text-gradient" },
+      { name: "ExpressJS", color: "pink-text-gradient" },
+      { name: "MongoDB", color: "blue-text-gradient" },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: carrent, // Placeholder, update with relevant image if available
+    source_code_link: "https://github.com/himaxx/Campus-Finder?tab=readme-ov-file",
+  },
+  {
+    name: "SpoofBlocker",
+    description:
+      "Developed an AI-based attendance system that accurately distinguishes between fake and genuine student identities using facial recognition. Captured real-time attendance via camera and stored data in Firebase for streamlined record keeping.",
+    organization: "Acropolis Institute of Technology and Research, Indore",
+    role: "Developer",
+    duration: "1 month",
+    technology: ["Streamlit", "Python", "WebRTC", "Firebase"],
+    tags: [
+      { name: "Streamlit", color: "blue-text-gradient" },
+      { name: "Python", color: "green-text-gradient" },
+      { name: "WebRTC", color: "pink-text-gradient" },
+      { name: "Firebase", color: "blue-text-gradient" },
+    ],
+    image: tripguide, // Placeholder, update with relevant image if available
+    source_code_link: "https://github.com/himaxx/Anti",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, projects };

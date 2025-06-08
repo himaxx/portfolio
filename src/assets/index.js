@@ -29,6 +29,12 @@ import tesla from "./company/tesla.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import sarafa_achievement from "./achievements/Sarafa.jpeg";
+import saintpeters_achievement from "./achievements/SaintPeters.png";
+import aitr_achievement from "./achievements/AITR.jpeg";
+import iitm_achievement from "./achievements/IITM.jpeg";
+import sih_achievement from "./achievements/SIH.jpeg";
+import nvidia_achievement from "./achievements/Nvidia.jpeg";
 
 export {
   logo,
@@ -59,4 +65,10 @@ export {
   carrent,
   jobit,
   tripguide,
+  sarafa_achievement,
+  saintpeters_achievement,
+  aitr_achievement,
+  iitm_achievement,
+  sih_achievement,
+  nvidia_achievement,
 };
