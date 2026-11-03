@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -9,8 +9,23 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  scroll-behavior: smooth;
   color-scheme: dark;
+}
+
+.font-mono,
+.font-mono * {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+}
+
+::selection {
+  background: rgba(145, 94, 255, 0.45);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid #915eff;
+  outline-offset: 3px;
+  border-radius: 8px;
 }
 
 .hash-span {
@@ -209,4 +224,149 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
+}
+
+/* ------------------------------------------------------------ fx layer */
+
+.grain {
+  position: fixed;
+  inset: -50%;
+  z-index: 70;
+  pointer-events: none;
+  opacity: 0.045;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grain 8s steps(10) infinite;
+}
+
+@keyframes grain {
+  0%, 100% { transform: translate(0, 0); }
+  20% { transform: translate(-3%, 2%); }
+  40% { transform: translate(2%, -3%); }
+  60% { transform: translate(-2%, -1%); }
+  80% { transform: translate(3%, 3%); }
+}
+
+.cursor-spotlight {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  background: radial-gradient(
+    520px circle at var(--mx, -999px) var(--my, -999px),
+    rgba(145, 94, 255, 0.09),
+    transparent 60%
+  );
+}
+
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 80;
+  width: 34px;
+  height: 34px;
+  margin: -17px 0 0 -17px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+  pointer-events: none;
+  display: grid;
+  place-items: center;
+  transition: width 0.25s ease, height 0.25s ease, margin 0.25s ease,
+    background 0.25s ease, border-color 0.25s ease, opacity 0.3s ease;
+  will-change: transform;
+}
+
+.cursor-ring.is-hover {
+  width: 56px;
+  height: 56px;
+  margin: -28px 0 0 -28px;
+  border-color: rgba(145, 94, 255, 0.9);
+  background: rgba(145, 94, 255, 0.12);
+}
+
+.cursor-ring.has-label {
+  width: 72px;
+  height: 72px;
+  margin: -36px 0 0 -36px;
+  background: #915eff;
+  border-color: #915eff;
+}
+
+.cursor-ring.is-text {
+  width: 4px;
+  height: 28px;
+  margin: -14px 0 0 -2px;
+  border-radius: 2px;
+  border-color: transparent;
+  background: rgba(145, 94, 255, 0.8);
+}
+
+.cursor-ring.is-down {
+  scale: 0.85;
+}
+
+.cursor-label {
+  font: 600 11px/1 "JetBrains Mono", monospace;
+  color: #fff;
+  letter-spacing: 0.04em;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.cursor-ring.has-label .cursor-label {
+  opacity: 1;
+}
+
+.glass-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015));
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px);
+}
+
+.spotlight-card {
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.spotlight-card:hover {
+  border-color: rgba(145, 94, 255, 0.45);
+  transform: translateY(-3px);
+}
+
+.run-btn {
+  background: linear-gradient(90deg, #6d3cf0, #915eff, #00cea8, #6d3cf0);
+  background-size: 300% 100%;
+  animation: run-shimmer 6s linear infinite;
+  box-shadow: 0 0 24px -6px rgba(145, 94, 255, 0.8);
+}
+
+@keyframes run-shimmer {
+  to { background-position: 300% 0; }
+}
+
+.packet {
+  fill: #c9b2ff;
+}
+
+.run-packet {
+  fill: #38ef7d;
+}
+
+.cover-grid {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: radial-gradient(circle at center, #000 30%, transparent 75%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .grain,
+  .run-btn {
+    animation: none;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
 }

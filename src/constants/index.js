@@ -3,26 +3,23 @@ import {
   backend,
   creator,
   web,
-  javascript,
-  typescript,
-  html,
-  css,
+  python,
+  tensorflow,
+  pandas,
+  numpy,
+  fastapi,
+  django,
   reactjs,
-  redux,
+  typescript,
   tailwind,
   nodejs,
   mongodb,
-  git,
-  figma,
+  sql,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
+  git,
   threejs,
+  kb_home,
+  antispoof,
   sarafa_achievement,
   saintpeters_achievement,
   aitr_achievement,
@@ -32,18 +29,11 @@ import {
 } from "../assets";
 
 export const navLinks = [
-  {
-    id: "about",
-    title: "About",
-  },
-  {
-    id: "work",
-    title: "Work",
-  },
-  {
-    id: "contact",
-    title: "Contact",
-  },
+  { id: "about", title: "About" },
+  { id: "work", title: "Journey" },
+  { id: "stack", title: "Stack" },
+  { id: "projects", title: "Projects" },
+  { id: "contact", title: "Contact" },
 ];
 
 const services = [
@@ -66,58 +56,21 @@ const services = [
 ];
 
 const technologies = [
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
-  },
+  { name: "Python", icon: python },
+  { name: "TensorFlow", icon: tensorflow },
+  { name: "Pandas", icon: pandas },
+  { name: "NumPy", icon: numpy },
+  { name: "FastAPI", icon: fastapi },
+  { name: "Django", icon: django },
+  { name: "React", icon: reactjs },
+  { name: "TypeScript", icon: typescript },
+  { name: "Tailwind CSS", icon: tailwind },
+  { name: "Node.js", icon: nodejs },
+  { name: "MongoDB", icon: mongodb },
+  { name: "SQL", icon: sql },
+  { name: "Three.js", icon: threejs, invert: true },
+  { name: "Docker", icon: docker },
+  { name: "Git", icon: git },
 ];
 
 const experiences = [
@@ -201,7 +154,7 @@ const projects = [
       { name: "Langflow", color: "green-text-gradient" },
       { name: "FastAPI", color: "pink-text-gradient" },
     ],
-    image: carrent, // Placeholder, update with relevant image if available
+    image: null,
     source_code_link: "https://github.com/samarjeet-singh-kheda/marg-ai-web-client",
   },
   {
@@ -220,7 +173,7 @@ const projects = [
       { name: "Langflow", color: "green-text-gradient" },
       { name: "Teachable Machines", color: "pink-text-gradient" },
     ],
-    image: jobit, // Placeholder, update with relevant image if available
+    image: kb_home,
     source_code_link: "https://github.com/himaxx/KhetiBuddy",
   },
   {
@@ -237,7 +190,7 @@ const projects = [
       { name: "ExpressJS", color: "pink-text-gradient" },
       { name: "MongoDB", color: "blue-text-gradient" },
     ],
-    image: carrent, // Placeholder, update with relevant image if available
+    image: null,
     source_code_link: "https://github.com/himaxx/Campus-Finder?tab=readme-ov-file",
   },
   {
@@ -254,7 +207,7 @@ const projects = [
       { name: "WebRTC", color: "pink-text-gradient" },
       { name: "Firebase", color: "blue-text-gradient" },
     ],
-    image: tripguide, // Placeholder, update with relevant image if available
+    image: antispoof,
     source_code_link: "https://github.com/himaxx/Anti",
   },
 ];

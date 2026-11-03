@@ -6,6 +6,7 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+import Magnetic from "./fx/Magnetic";
 
 const Contact = () => {
   const formRef = useRef();
@@ -88,7 +89,7 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               placeholder="What's your good name?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border border-transparent focus:border-[#915EFF]/60 focus:shadow-[0_0_0_4px_rgba(145,94,255,0.15)] transition font-medium'
             />
           </label>
           <label className='flex flex-col'>
@@ -99,7 +100,7 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               placeholder="What's your web address?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border border-transparent focus:border-[#915EFF]/60 focus:shadow-[0_0_0_4px_rgba(145,94,255,0.15)] transition font-medium'
             />
           </label>
           <label className='flex flex-col'>
@@ -110,16 +111,19 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder='What you want to say?'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border border-transparent focus:border-[#915EFF]/60 focus:shadow-[0_0_0_4px_rgba(145,94,255,0.15)] transition font-medium'
             />
           </label>
 
-          <button
-            type='submit'
-            className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
-          >
-            {loading ? "Sending..." : "Send"}
-          </button>
+          <Magnetic className='w-fit'>
+            <button
+              type='submit'
+              data-cursor='Send'
+              className='run-btn py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
+            >
+              {loading ? "Sending..." : "Send"}
+            </button>
+          </Magnetic>
         </form>
       </motion.div>
 

@@ -20,15 +20,18 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import python from "./tech/python.png";
+import tensorflow from "./tech/tensorflow.png";
+import pandas from "./tech/pandas.png";
+import numpy from "./tech/numpy.png";
+import fastapi from "./tech/fastapi.png";
+import django from "./tech/django.png";
+import sql from "./tech/sql.png";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+import kb_home from "./project_images/KBHome.jpg";
+import antispoof from "./project_images/AntiSpoof.jpg";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+
 import sarafa_achievement from "./achievements/Sarafa.jpeg";
 import saintpeters_achievement from "./achievements/SaintPeters.png";
 import aitr_achievement from "./achievements/AITR.jpeg";
@@ -58,13 +61,15 @@ export {
   tailwind,
   typescript,
   threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
-  carrent,
-  jobit,
-  tripguide,
+  python,
+  tensorflow,
+  pandas,
+  numpy,
+  fastapi,
+  django,
+  sql,
+  kb_home,
+  antispoof,
   sarafa_achievement,
   saintpeters_achievement,
   aitr_achievement,
