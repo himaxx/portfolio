@@ -15,6 +15,7 @@ import {
 } from "../constants/stack";
 import { textVariant, fadeIn } from "../utils/motion";
 import Magnetic from "./fx/Magnetic";
+import StackIcon from "./StackIcon";
 import usePrefersReducedMotion from "./fx/usePrefersReducedMotion";
 
 const nodeById = Object.fromEntries(nodes.map((n) => [n.id, n]));
@@ -286,12 +287,7 @@ const Graph = ({ active, setActive, pinned, setPinned, run }) => {
                 boxShadow: on ? `0 0 28px -4px ${n.color}` : "none",
               }}
             >
-              <span
-                className='grid place-items-center w-7 h-7 rounded-full text-[12px] font-bold text-white shrink-0'
-                style={{ background: `${n.color}33`, boxShadow: `inset 0 0 0 1px ${n.color}aa`, color: n.color }}
-              >
-                {n.glyph}
-              </span>
+              <StackIcon node={n} size={30} />
               {n.name}
             </button>
           );
@@ -321,12 +317,7 @@ const MobileStack = ({ active, setPinned }) => (
                   active === n.id ? "border-white/40 bg-[#1a1440] text-white" : "border-white/10 bg-[#0d0a24] text-white/80"
                 }`}
               >
-                <span
-                  className='grid place-items-center w-6 h-6 rounded-full text-[11px] font-bold'
-                  style={{ background: `${n.color}33`, color: n.color }}
-                >
-                  {n.glyph}
-                </span>
+                <StackIcon node={n} size={26} />
                 {n.name}
               </button>
             ))}
@@ -352,12 +343,7 @@ const InfoPanel = ({ id }) => {
             transition={{ duration: 0.2 }}
           >
             <div className='flex items-center gap-3'>
-              <span
-                className='grid place-items-center w-10 h-10 rounded-xl text-[16px] font-bold'
-                style={{ background: `${n.color}26`, color: n.color, boxShadow: `inset 0 0 0 1px ${n.color}88` }}
-              >
-                {n.glyph}
-              </span>
+              <StackIcon node={n} size={44} />
               <div>
                 <h3 className='text-white font-bold text-[18px] leading-tight'>{n.name}</h3>
                 <p className='text-secondary text-[12px] font-mono uppercase tracking-wider'>{n.role}</p>
@@ -498,11 +484,11 @@ const Tech = () => {
               variants={fadeIn("up", "spring", i * 0.12, 0.6)}
               className='glass-card spotlight-card rounded-2xl p-4'
             >
-              <div className='flex items-center gap-2'>
-                <span className='w-2 h-2 rounded-full' style={{ background: b.color, boxShadow: `0 0 12px ${b.color}` }} />
+              <div className='flex items-center gap-3'>
+                <StackIcon node={b} size={34} />
                 <p className='text-white font-semibold'>{b.name}</p>
               </div>
-              <p className='mt-1 text-secondary text-[13px]'>{b.desc}</p>
+              <p className='mt-2 text-secondary text-[13px]'>{b.desc}</p>
             </motion.div>
           ))}
         </div>
